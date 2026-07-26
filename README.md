@@ -39,13 +39,15 @@ SUMPRODUCT materialises the full 32,672-row comparison per cell. Across 10 job t
 
 ```=SUMPRODUCT((jobs[job_title_short]=A3)*(jobs[job_country]=Country)*(jobs[Type_match]=TRUE)) ```
 
-<img width="746" height="179" alt="EXCEL_Yt6XZfZdW7" src="https://github.com/user-attachments/assets/f15184d1-12be-4bae-8fbb-6e8c0b017f1a" />
+
+<img width="242" height="220" alt="EXCEL_ajxmkZZPcj" src="https://github.com/user-attachments/assets/528ac35f-8a0d-45eb-b85b-82b411311359" />
+
 
 Across 594 platforms it lags on every dropdown change, so that table uses COUNTIFS, a native aggregate that never builds the array. Both return the same number; the difference only shows up at scale.
 
 ```=COUNTIFS(jobs[job_via],A4,jobs[job_title_short],Title,jobs[job_country],Country,jobs[Type_match],TRUE)```
 
-<img width="242" height="220" alt="EXCEL_ajxmkZZPcj" src="https://github.com/user-attachments/assets/528ac35f-8a0d-45eb-b85b-82b411311359" />
+<img width="746" height="179" alt="EXCEL_Yt6XZfZdW7" src="https://github.com/user-attachments/assets/f15184d1-12be-4bae-8fbb-6e8c0b017f1a" />
 
 
 
