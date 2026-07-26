@@ -9,7 +9,8 @@ Interactive Excel dashboard for exploring 2023 data-job salaries by role, countr
 
 Three dropdowns (Job Title, Country, Contract Type) drive everything at once: median salary by role (bar), median salary by country (map), median salary by contract type (bar), plus KPIs for median salary, top hiring platform, and job count.
 
-<img width="1366" height="479" alt="EXCEL_t155KwCqPe" src="https://github.com/user-attachments/assets/1a090c30-1a2a-485e-ad55-c729664d390f" />
+
+<img width="1366" height="479" alt="EXCEL_t155KwCqPe" src="https://github.com/user-attachments/assets/28fdcba5-90dc-413c-9e0c-76c0bd89b110" />
 
 
 
@@ -38,14 +39,14 @@ SUMPRODUCT materialises the full 32,672-row comparison per cell. Across 10 job t
 
 ```=SUMPRODUCT((jobs[job_title_short]=A3)*(jobs[job_country]=Country)*(jobs[Type_match]=TRUE)) ```
 
-<img width="242" height="220" alt="image" src="https://github.com/user-attachments/assets/60edb337-d3b8-4c67-8cd5-765ec09e862d" />
+<img width="611" height="201" alt="EXCEL_H6WFMdG07y" src="https://github.com/user-attachments/assets/7564d046-a316-4a72-b79a-edf636729c13" />
+
 
 Across 594 platforms it lags on every dropdown change, so that table uses COUNTIFS, a native aggregate that never builds the array. Both return the same number; the difference only shows up at scale.
 
 ```=COUNTIFS(jobs[job_via],A4,jobs[job_title_short],Title,jobs[job_country],Country,jobs[Type_match],TRUE)```
 
-<img width="746" height="179" alt="image" src="https://github.com/user-attachments/assets/b9ec45dd-005f-4c5c-a5f3-73dc861224ee" />
-
+<img width="746" height="179" alt="EXCEL_Yt6XZfZdW7" src="https://github.com/user-attachments/assets/f15184d1-12be-4bae-8fbb-6e8c0b017f1a" />
 
 
 The map changed measure mid-build. I originally had plotted job count but later I realised it was useless as the US dominates so heavily that everything else rendered the same pale shade. Median salary works because comparable roles pay very differently by region, and that has nothing to do with job volume
