@@ -1,4 +1,3 @@
-# Excel-Salary-Dashboard
 # Data Jobs Salary Dashboard (Excel)
 
 Interactive Excel dashboard for exploring 2023 data-job salaries by role, country, and contract type. The dataset and brief come from Luke Barousse's Excel course; the build is my own.
