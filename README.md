@@ -3,8 +3,6 @@
 
 Interactive Excel dashboard for exploring 2023 data-job salaries by role, country, and contract type. The dataset and brief come from Luke Barousse's Excel course; the build is my own.
 
-**File:** `Salary_Dashboard.xlsx`
-
 ## What it does
 
 Three dropdowns (Job Title, Country, Contract Type) drive everything at once: median salary by role (bar), median salary by country (map), median salary by contract type (bar), plus KPIs for median salary, top hiring platform, and job count.
